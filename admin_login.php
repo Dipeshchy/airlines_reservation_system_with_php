@@ -40,7 +40,7 @@ admin_login();
                  <div class="form-group"><input type="password" name="password" class="form-inline box" placeholder="Password">
                 </div>
 
-                <div class="form-group text-center">
+                <div class="form-group text-center" id="submit-back">
                   <input type="submit" name="submit" class="btn btn-primary">
                   <input type="submit" name="back" class="btn btn-danger" value="Back">
                   

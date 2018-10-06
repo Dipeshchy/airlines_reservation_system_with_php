@@ -65,7 +65,7 @@ function admin_login()
 		$username = escape_string($_POST['username']);
 		$password = escape_string($_POST['password']);
 
-		$query= execute_query("SELECT * FROM admin WHERE admin_username = '{$username}' AND admin_password= '{$password}' ");
+		$query= execute_query("SELECT * FROM airlines_reservation_system.admin WHERE admin_username = '{$username}' AND admin_password= '{$password}' ");
 		confirm($query);
 
 		if(mysqli_num_rows($query) == 0)

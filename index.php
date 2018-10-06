@@ -1,4 +1,7 @@
+<?php
 
+include('database/db.php');
+?>
 <?php
     include_once('link_container.php');
 ?>

@@ -33,7 +33,11 @@ background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, F
     
     margin: 92px 300px 300px 530px;
     width: 500px;
-    border: 1px dotted blue;
+    
+}
+#admin-login header
+{
+    margin-left: -58px;
 }
 #admin-login div form div 
 {
@@ -60,4 +64,23 @@ form{
 .how
 {
     float: left;
+}
+#submit-back
+{
+        margin-left: -153px;
+}
+#admin-sidenav
+{
+    background-color: black;
+
+    width: 149px;
+    height: 698px;
+        margin-top: 12px;
+color: white;
+    }
+
+#admin-topnav
+{
+        background-color: black;
+        font-color:white;
 }

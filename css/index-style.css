@@ -1,0 +1,63 @@
+body{
+    background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.justify-content-end a 
+{
+    font-size: 120%;
+    color: green;
+}
+.justify-content-end a:hover
+{
+    font-size: 150%;
+}
+#myVideo {
+    /* position: relative; */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+#admin-login
+{
+    
+    margin: 92px 300px 300px 530px;
+    width: 500px;
+    border: 1px dotted blue;
+}
+#admin-login div form div 
+{
+    font-size: 130%;
+}
+
+.box
+{
+    padding-left: 15px;
+}
+form{
+    margin-left: 90px;
+    margin-top: 30px;
+}
+.button1
+{
+    float: left;
+}
+#section-head
+{
+    font-size: 300%;
+    color: red;
+}
+.how
+{
+    float: left;
+}

@@ -9,10 +9,10 @@ include('database/db.php');
      <div class="container">
         <nav class="nav justify-content-end">
         <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-user"> Login </i></a>
+                <a class="nav-link" href="passenger_login.php"><i class="fa fa-user"> Login </i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-user-plus"> Sign Up</i></a>
+                <a class="nav-link" href="passenger_signup.php"><i class="fa fa-user-plus"> Sign Up</i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin_login.php"><i class="fa fa-user-secret"> Admin</i></a>

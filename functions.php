@@ -81,7 +81,83 @@ function admin_login()
 			$_SESSION['username'] = $username;
 			header("Location:admin");
 		}
+		
 	}
 }	
+
+function passenger_signup()
+{
+	if(isset($_POST['signup']))
+	{
+		$firstname = escape_string($_POST['firstname']);
+		$lastname = escape_string($_POST['lastname']);
+		$age = escape_string($_POST['age']);
+		$nationality = escape_string($_POST['nationality']);
+		$username = escape_string($_POST['username']);
+		$email = escape_string($_POST['email']);
+		$mobilenumber = escape_string($_POST['mobilenumber']);
+		$passenger_image = $_FILES['image']['name'];
+    	$passenger_image_temp = $_FILES['image']['tmp_name'];
+
+		$address = escape_string($_POST['address']);
+		$password = escape_string($_POST['password']);
+		$confirmpassword = escape_string($_POST['confirmpassword']);
+
+
+
+		
+		if($password != $confirmpassword)
+		{
+			set_message("password didn't match");
+		}
+		else
+			{
+				move_uploaded_file($passenger_image_temp, "images/passengers/$passenger_image");
+
+
+		$query= execute_query("INSERT INTO airlines_reservation_system.passengers(username, passenger_firstname, passenger_lastname ,passenger_age , passenger_email , passenger_password, passenger_mobno , passenger_address , passenger_nationality , passenger_image) VALUES('{$username}' , '{$firstname}' , '{$lastname}' , '{$age}' , '{$email}', '{$password}' , '{$mobilenumber}', '{$address}', '{$nationality}', '{$passenger_image}')");
+
+		confirm($query);
+
+		if($query)
+		
+		{
+
+			set_message("Successfully registered");
+			
+			
+		}
+		
+	}
+	}
+}	
+
+function passenger_login()
+{
+	if(isset($_POST['submit']))
+	{
+		$username = escape_string($_POST['username']);
+		$password = escape_string($_POST['password']);
+
+		$query= execute_query("SELECT * FROM airlines_reservation_system.passengers WHERE username = '{$username}' AND passenger_password= '{$password}' ");
+		confirm($query);
+
+		if(mysqli_num_rows($query) == 0)
+		
+		{
+
+			set_message("Wrong username or password");
+			
+			
+		}
+		else
+		{
+			$_SESSION['username'] = $username;
+			header("Location:admin");
+		}
+		
+	}
+}	
+
 
 ?>

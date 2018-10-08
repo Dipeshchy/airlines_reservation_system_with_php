@@ -15,17 +15,14 @@ if(isset($_POST['back']))
 
 ?>
 <?php
-
-admin_login();
+passenger_login();
 
 ?>
-
-
-    <!-- Page Content -->
+   <!-- Page Content -->
     <div id="admin-login" class="text-center">
 
       <header id="admin-login-header">
-            <h1><i class="fa fa-user-secret"> Admin Login</i></h1>
+            <h1><i class="fa fa-user-secret"> Passenger Login</i></h1>
             <h3 class="text-danger">
                 <?php
                     display_message();
@@ -49,23 +46,12 @@ admin_login();
                    
                 </div>
                 
-            </form>
-           
-            
+            </form>            
         </div>  
-
-
-    
-
-
         </div>
 
  
     <!-- /.container -->
-
-    
-
-       
 
         <!-- Footer -->
         

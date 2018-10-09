@@ -29,7 +29,7 @@ if(isset($_POST['create_admin']))
     $add_admin_query = mysqli_query($connection , $query);
     
   
-  echo "Admin created"." "."<a href='admin.php'>View Admin</a>";
+  echo "Admin created"." "."<a href='admin.php'> View Admin</a>";
     
 }
 

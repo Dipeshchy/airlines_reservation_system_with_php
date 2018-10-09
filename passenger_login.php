@@ -3,8 +3,13 @@
 include('link_container.php');
 include('database/db.php');
 include_once('functions.php');
-session_start();
+
 ?>
+
+<?php 
+
+session_start();
+ ?>
 
 <?php
 if(isset($_POST['back']))
@@ -15,7 +20,9 @@ if(isset($_POST['back']))
 
 ?>
 <?php
+
 passenger_login();
+
 
 ?>
    <!-- Page Content -->

@@ -62,10 +62,10 @@ function admin_login()
 {
 	if(isset($_POST['submit']))
 	{
-		$username = escape_string($_POST['username']);
+		$admin_username = escape_string($_POST['username']);
 		$password = escape_string($_POST['password']);
 
-		$query= execute_query("SELECT * FROM airlines_reservation_system.admin WHERE admin_username = '{$username}' AND admin_password= '{$password}' ");
+		$query= execute_query("SELECT * FROM airlines_reservation_system.admin WHERE admin_username = '{$admin_username}' AND admin_password= '{$password}' ");
 		confirm($query);
 
 		if(mysqli_num_rows($query) == 0)
@@ -78,7 +78,7 @@ function admin_login()
 		}
 		else
 		{
-			$_SESSION['username'] = $username;
+			$_SESSION['admin_username'] = $admin_username;
 			header("Location:admin");
 		}
 		
@@ -153,11 +153,20 @@ function passenger_login()
 		else
 		{
 			$_SESSION['username'] = $username;
-			header("Location:admin");
+			header("Location:index.php");
 		}
 		
 	}
 }	
 
+function show_user_image_in_home()
+{
+	$query = execute_query("SELECT * FROM airlines_reservation_system.passengers WHERE username = '{$_SESSION['username']}' ");
+	confirm($query);
+	while ($row=fetch_array($query)) {
+		$passenger_image = $row['passenger_image'];
+		echo "<img src='images/passengers/{$passenger_image}' alt='' height='60px' width='60px'>";
+	}
+}
 
 ?>

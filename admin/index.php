@@ -9,7 +9,7 @@
 
         <!-- Navigation -->
       <!--   <?php
-        include "includes/admin_navigation.php";
+        // include "includes/admin_navigation.php";
         ?>
  -->
         <div id="page-wrapper">
@@ -21,7 +21,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Welcome to Admin
-                            <small> <?php echo $_SESSION['username']; ?> </small>
+                            <small> <?php echo $_SESSION['admin_username']; ?> </small>
                         </h1>
                   
 

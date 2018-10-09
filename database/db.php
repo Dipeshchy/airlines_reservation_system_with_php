@@ -78,8 +78,7 @@ flight_schedule_id int AUTO_INCREMENT PRIMARY KEY,
 flight_date DATE,
 departure TIME,
 arrival TIME,
-aeroplane_id int,
-net_fare float
+aeroplane_id int
 ) ";
 $create = mysqli_query($connection,$query_create_flightschedule_table);
 if(!$create)

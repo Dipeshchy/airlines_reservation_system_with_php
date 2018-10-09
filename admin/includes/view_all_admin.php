@@ -11,7 +11,7 @@ include("../database/db.php");
                                     <th>Admin Firstname</th>
                                     <th>Admin lastname</th>
                                    
-                                    <th>User Image</th>
+                                    <th>Admin Image</th>
                                     
                                     
                                     

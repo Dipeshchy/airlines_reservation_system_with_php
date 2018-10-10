@@ -17,6 +17,19 @@
                         </ul>
                     </li>
 
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#announcements_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Announcements <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="announcements_dropdown" class="collapse">
+                            <li>
+                                <a href="./announcements.php">View All Announcements</a>
+                            </li>
+                            <li>
+                                <a href="announcements.php?source=add_announcements">Add Announcements</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="active">
                         <a href="passengers.php"><i class="fa fa-fw fa-dashboard"></i> View All Passengers</a>
                     </li>
@@ -72,10 +85,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#airfare_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Air Fares <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="airfare_dropdown" class="collapse">
                             <li>
-                                <a href="./posts.php">View All Air Fares</a>
+                                <a href="./airfares.php">View All Air Fares</a>
                             </li>
                             <li>
-                                <a href="posts.php?source=add_post">Add Air Fares</a>
+                                <a href="airfares.php?source=add_airfares">Add Air Fares</a>
                             </li>
                         </ul>
                     </li>

@@ -165,8 +165,34 @@ function show_user_image_in_home()
 	confirm($query);
 	while ($row=fetch_array($query)) {
 		$passenger_image = $row['passenger_image'];
-		echo "<img src='images/passengers/{$passenger_image}' alt='' height='60px' width='60px'>";
+		echo "<img src='images/passengers/{$passenger_image}' alt='' class='rounded-circle' height='60px' width='60px'>";
 	}
 }
+
+function get_announcements()
+{
+	$query = execute_query("SELECT * FROM airlines_reservation_system.announcements");
+	confirm($query);
+	while($row= fetch_array($query))
+	{
+		$announcements_title = $row['announcements_title'];
+		$announcements_image = $row['announcements_image'];
+		$announcements_detail = $row['announcements_detail'];
+		$announcements_id = $row['announcements_id'];
+
+		?>
+		 <div class="col-lg-4" style="float: left;">
+		 <img src="images/announcements/<?php echo $announcements_image; ?>" alt="" class="col-lg-12">
+		 <h3 style="text-align: center; color: white; background-color: rgb(168, 144, 50);"><?php echo $announcements_title; ?></h3>
+		 <article  style="background-color: white; color: black;">
+        <p style="background-color: white; color: black;"><?php echo substr($announcements_detail,0,70); ?>..<a href='announcements.php?announcement_id=<?php echo $announcements_id;?>'> See more <a>   </p>
+    </article>
+
+		 </div>
+		 
+<?php
+	}
+}
+
 
 ?>

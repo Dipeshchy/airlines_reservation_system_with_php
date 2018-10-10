@@ -12,6 +12,7 @@ background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, F
 .justify-content-end a:hover
 {
     font-size: 150%;
+    
 }
 #myVideo {
     /* position: relative; */

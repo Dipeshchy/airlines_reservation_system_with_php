@@ -64,8 +64,7 @@ $query_create_airfare_table = "CREATE TABLE IF NOT EXISTS airlines_reservation_s
 airfare_id int AUTO_INCREMENT PRIMARY Key,
 aeroplane_id int,
 route_id int,
-fare float,
-total_fare float
+fare float
 ) ";
 $create = mysqli_query($connection,$query_create_airfare_table);
 if(!$create)
@@ -116,4 +115,16 @@ if(!$create)
 	die('Failed'.mysqli_error($connection));
 }
 
+
+$query_create_announcements_table = "CREATE TABLE IF NOT EXISTS airlines_reservation_system.announcements(
+announcements_id int AUTO_INCREMENT PRIMARY KEY,
+announcements_title varchar(255),
+announcements_image text,
+announcements_detail varchar(255)
+)";
+$create = mysqli_query($connection , $query_create_announcements_table);
+if(!$create)
+{
+	die('Failed'.mysqli_error($connection));
+}
 ?>

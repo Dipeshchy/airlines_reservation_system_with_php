@@ -1,6 +1,6 @@
 
     <?php 
-            if(isset($_SESSION['username']))
+            if(isset($_SESSION['username']) && $_SESSION['username']!='')
             {
                $passenger_username = $_SESSION['username'];
 
@@ -19,7 +19,7 @@
                        
                         <li class="divider"></li>
                         <li>
-                            <a href="admin/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li> 
@@ -58,11 +58,20 @@
              <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Support</a>
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">FAQS</a>
-            <a class="dropdown-item" href="#">Contact number</a>
-            <a class="dropdown-item" href="#">Address</a>
+            <a class="dropdown-item" href="faqs.php">FAQS</a>
+            <a class="dropdown-item" href="#contact">Contact number</a>
+            <a class="dropdown-item" href="#contact">Address</a>
             </div>
             </li>
+          <!--   <li class="nav-item">
+            <a class="nav-link" id="support">Support</a>
+            <div id="sub-support">
+                <li><a href="#">FAQS</a></li>
+            <li><a href="#">Contact number</a></li>
+            <li><a href="#">Address</a></li>
+            
+            </div>
+            </li> -->
              <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
             <div class="dropdown-menu">

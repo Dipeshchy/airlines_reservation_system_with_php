@@ -36,16 +36,16 @@ include "includes/header.php";
                         }
                         switch ($source)
                         {
-                            // case 'add_passenger';
-                            //     include "includes/add_passenger.php";
-                            //     break;
+                            case 'add_airports';
+                                include "includes/add_airports.php";
+                                break;
                                 
-                            case 'edit_passenger';
-                                include "includes/edit_passengers.php";
+                            case 'edit_airports';
+                                include "includes/edit_airports.php";
                                 break;
                                 
                             default:
-                                include "includes/view_all_passengers.php";
+                                include "includes/view_all_airports.php";
                                 break;
                                 
                         }

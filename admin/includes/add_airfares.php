@@ -120,14 +120,6 @@ echo "<option value='{$route_id}'>{$route_starting_airport} To {$route_destinati
         <input type="number" class="form-control" name="airfare" id="airfare">
     </div>
 
-   
-    
-  <!--   <div class="form-group">
-        <label for="content">Post Content</label>
-        <textarea class="form-control" name="post_content" id="" cols="30" rows="10">
-        </textarea>
-    </div>
-     -->
     <div class="form-group">
         
         <input type="submit" class="btn btn-primary" name="add_airfare" value="Add airfare">

@@ -10,21 +10,24 @@ if(isset($_POST['add_aeroplane']))
     $aeroplane_number=$_POST['aeroplane_number'];
     $aeroplane_brand=$_POST['aeroplane_brand'];
     
-    $aeroplane_capacity= $_POST['aeroplane_capacity'];
+
     
     
     // $post_comment_count = 4;
     
     
     
-    $query = "INSERT INTO airlines_reservation_system.aeroplanes(aeroplane_number, aeroplane_brand, aeroplane_capacity)";
-    $query .= "VALUES('{$aeroplane_number}' ,'{$aeroplane_brand}' , '{$aeroplane_capacity}') ";
+    $query = "INSERT INTO airlines_reservation_system.aeroplanes(aeroplane_number, aeroplane_brand)";
+    $query .= "VALUES('{$aeroplane_number}' ,'{$aeroplane_brand}' ) ";
     
     $add_aeroplane_query = mysqli_query($connection , $query);
-    
+     if(!$add_aeroplane_query)
+     {
+        die("Error ".mysqli_error($connection));
+     }
  
 
-  echo "aeroplane added"." "."<a href='aeroplanes.php'> View aeroplanes</a>";
+  echo "Aeroplane added"." "."<a href='aeroplanes.php'> View aeroplanes</a>";
     
 }
 
@@ -60,11 +63,7 @@ if(isset($_POST['add_aeroplane']))
     </div>
 
     
-     <div class="form-group">
-        <label for="aeroplane_capacity">Aeroplane Capacity</label>
-        <input type="text" class="form-control" name="aeroplane_capacity" id="aeroplane_capacity">
-    </div>
-
+    
    
     
   <!--   <div class="form-group">

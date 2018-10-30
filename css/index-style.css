@@ -1,26 +1,23 @@
-body{
-    background: #DAD299;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body
+{
+  background: #076585;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 .justify-content-end a 
 {
     font-size: 120%;
-    color: green;
+    color: red;
 }
 .justify-content-end a:hover
 {
     font-size: 150%;
+
     
 }
-#myVideo {
-    /* position: relative; */
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
+
 .content {
     position: fixed;
     bottom: 0;
@@ -111,3 +108,9 @@ color: white;
         margin-right: 303px;
         font-weight: 500;
 }
+/*#announcement-title{
+    text-align: center; 
+     color: white; 
+     background-color: rgb(168, 144, 50);
+      font-weight: 700;
+}*/

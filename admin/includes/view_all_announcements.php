@@ -47,7 +47,7 @@ include("../database/db.php");
 
                            
                            
-                            echo "<td><a href='announcements.php?source=edit_announcement&edit_announcement={$announcement_id}'>Edit</a></td>";
+                            echo "<td><a href='announcements.php?source=edit_announcements&edit_announcement={$announcement_id}'>Edit</a></td>";
                             echo "<td><a href='announcements.php?delete=$announcement_id'>Delete</a></td>";
                            
                             

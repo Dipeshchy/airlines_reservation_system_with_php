@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="css/index-style.css">
 <?php
 
 include('database/db.php');
@@ -48,10 +49,11 @@ if(isset($_GET['announcement_id']))
         ?>
    			
         	 <div class="container">
-		 <img style="float: left;" src="images/announcements/<?php echo $announcement_image; ?>" alt="" class="col-lg-3 justify-content-center">
-		 <h3 style="text-align: center; color: white; background-color: rgb(168, 144, 50); font-weight: 700;" class="text-center"><?php echo $announcement_title; ?></h3>
-		 <article  style="background-color: white; color: black;">
-        <p style="background-color: white; color: black;"><?php echo $announcement_detail; ?>  </p>
+		 
+		 <h3 id='announcement-title' class="text-center"><?php echo $announcement_title; ?></h3>
+         <img src="images/announcements/<?php echo $announcement_image; ?>" alt="" class="col-lg-3 rounded mx-auto d-block text-center">
+		 <article>
+        <p style="font-size: 120%;" id='announcement-detail'><?php echo $announcement_detail; ?>  </p>
     </article>
 
 		 </div>
@@ -62,7 +64,7 @@ if(isset($_GET['announcement_id']))
 }
 
   ?>
-  <div class="">
+  <div class="fixed-bottom">
 <?php
 
 include("includes/footer.php");

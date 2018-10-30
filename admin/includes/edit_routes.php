@@ -2,14 +2,29 @@
 include('../database/db.php');
 
 ?>
-<?php 
 
+<?php 
 include('../functions.php');
+
  ?>
 
+ <?php 
+    if(isset($_GET['edit_route']))
+    {
+        $the_route_id = $_GET['edit_route'];
+        $query1 = execute_query("SELECT * FROM airlines_reservation_system.routes WHERE route_id='{$the_route_id}' ");
+        confirm($query1);
+        while($row=fetch_array($query1))
+        {
+            $starting_airport = $row['starting_airport'];
+            $destination =$row['destination'];
+        }
+    }
 
-<?php
-if(isset($_POST['add_route']))
+  ?>
+
+ <?php
+if(isset($_POST['edit_route']))
 {
 
     $route_starting_airport=$_POST['route_starting_airport'];
@@ -19,14 +34,14 @@ if(isset($_POST['add_route']))
     
     
     
-    $query = "INSERT INTO airlines_reservation_system.routes(starting_airport, destination)";
-    $query .= "VALUES('{$route_starting_airport}' ,'{$route_destination}') ";
+    $query = execute_query("UPDATE airlines_reservation_system.routes SET starting_airport='{$route_starting_airport}' , destination='{$route_destination}' WHERE route_id='{$the_route_id}' ");
     
-    $add_route_query = mysqli_query($connection , $query);
+    
+    confirm($query);
     
  
 
-  echo "route added"." "."<a href='routes.php'> View routes</a>";
+header('Location:routes.php');
     
 }
 
@@ -39,15 +54,6 @@ if(isset($_POST['add_route']))
    <form action="" method="post" enctype="multipart/form-data">
     
     
-    
-   <!--  <div class="form-group">
-        <select name="route_role" id="">
-            <option value="subscriber">Select Option</option>
-            <option value="admin">Admin</option>
-            <option value="subscriber">Subscriber</option>
-        </select>
-    </div> -->
-
     <div class="form-group">
         <label for="route_start">Route Starting Airport</label>
         <br>
@@ -70,10 +76,8 @@ if(isset($_POST['add_route']))
        <!--  <input type="text" class="form-control" name="route_starting_airport" id="route_start"> -->
     </div>
     
-    <br>
-    
-    
-<div class="form-group">
+   
+    <div class="form-group">
         <label for="route_destination">Route Destination</label>
         <br>
         <select name="route_destination">
@@ -95,18 +99,12 @@ if(isset($_POST['add_route']))
         <!-- <input type="text" class="form-control" name="route_destination" id="route_destination"> -->
     </div>
 
-  
-   
+
     
-  <!--   <div class="form-group">
-        <label for="content">Post Content</label>
-        <textarea class="form-control" name="post_content" id="" cols="30" rows="10">
-        </textarea>
-    </div>
-     -->
+
     <div class="form-group">
         
-        <input type="submit" class="btn btn-primary" name="add_route" value="Add route">
+        <input type="submit" class="btn btn-primary" name="edit_route" value="Add route">
     </div>
     
-</form> 
+</form>  

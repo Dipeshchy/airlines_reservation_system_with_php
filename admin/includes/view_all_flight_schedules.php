@@ -66,7 +66,7 @@ include("../database/db.php");
 
                            
                            
-                            echo "<td><a href='flight_schedules.php?source=edit_flight_schedule&edit_flight_schedule={$flight_schedule_id}'>Edit</a></td>";
+                            echo "<td><a href='flight_schedules.php?source=edit_flight_schedules&edit_flight_schedule={$flight_schedule_id}'>Edit</a></td>";
                             echo "<td><a href='flight_schedules.php?delete=$flight_schedule_id'>Delete</a></td>";
                            
                         }

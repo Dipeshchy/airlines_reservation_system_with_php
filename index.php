@@ -16,13 +16,13 @@ passenger_login();
 
  <body>
      <div class="container">
-        
+        <div id="header">
         <?php 
 
             include('includes/header.php');
 
          ?>
-            
+           </div> 
      </div>
  </body>
 <?php
@@ -57,44 +57,54 @@ include("includes/ads.php");
     get_announcements();
 
     ?>
-   <!--  <div class="col-lg-4" id="everest-experience" style="float: left;">
-        <img src="images/everest.jpg" alt="" class="col-lg-12">
-        <h3 style="text-align: center; color: white; background-color: rgb(168, 144, 50);">Everest Experience</h3>
-        <article  style="background-color: white; color: black;">
-        <p style="background-color: white; color: black;">Everest Experience is a close-encounter mountain flight-seeing tour.  Indulge in the panorama and maybe, just maybe, you might realize what you have been missing, or find what you have been looking for, all this while.After all a trip to Nepal would be incomplete without truly understanding what really makes it beautiful.</p>
-        <p>Nothing compares to the sheer beauty or awe, the Himalayas has to offer.  Take the mother of all mountain flights, the Everest Experience where we put you, one on one with Mt. Everest, so close that you can almost touch it.</p>
-    </article>
-        </div>
-    
-     <div class="col-lg-4">
-        <img src="images/destination.jpg" alt="" class="col-lg-12">
-        <h3 style="text-align: center; color: white; background-color: blue; ">Flight destination we provide</h3>
-        <p style="background-color: white; color: black; overflow: hidden;">Kathmandu,Bhadrapur,Biratnagar,Lukla,Janakpur,
-        Bharatpur,Dhangadi and many more..</p>
-    </div>  -->
 
 
- <!-- <div class="col-lg-4" style="float: left;  border:2px solid red;">Left Stuff</div>
- <div class="col-lg-4" style="float: left;  border:2px solid red;">Middle Stuff</div>
- <div class="col-lg-4" style="float: left;  border:2px solid red;">Right Stuff</div>
- <div class="col-lg-4" style="float: left;  border:2px solid red;">Right Stuff</div>
- <br style="clear: left;" /> -->
+
   <br style="clear: left;" />
 
 
-   <!--   <div class="col-lg-4" style="float: none;">
-        <img src="images/destination.jpg" alt="" class="col-lg-12">
-        <h3 style="text-align: center; color: white; background-color: blue; ">Flight destination we provide</h3>
-        <p style="background-color: white; color: black; overflow: hidden;">Kathmandu,Bhadrapur,Biratnagar,Lukla,Janakpur,
-        Bharatpur,Dhangadi and many more..</p>
-    </div>
- -->
+  
 </div>
 
-<!-- <div class="container" id='contact'>
-    <h3>Contact us</h3>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-</div> -->
+
+
+<div id="contact" class="container card">
+        <h3 class="text-center col-md-12" style="float: left;">Contact Us</h3>
+        
+            <table class="col-md-12">
+                <tr>
+                    <td>
+                        <section class="col-md-6">
+            <h5>Contact Number</h5>
+            <ul>
+                <li><h6>Main Office :</h6>
+                    <ul>
+                        <li>Phone Number: 01-5432943</li>
+                        <li>Mobile Number: 9842458893</li>
+                        <li>Fax : 01 4434343</li>
+                    </ul>
+                </li>
+               
+            </ul>  
+        </section>
+        </td>
+
+        <td>
+        <section class="col-md-12">
+            <h5>Address</h5>
+            <ul>
+                <li>hi</li>
+                <li>Ktm</li>
+                <li>New Baneswor</li>
+            </ul>
+
+        </section> 
+        </td>
+        </tr>  
+        </table> 
+          
+    
+</div>
 
 <div class="fixed-bottom;">
 <?php

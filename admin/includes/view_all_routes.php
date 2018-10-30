@@ -47,7 +47,7 @@ include("../database/db.php");
 
                            
                            
-                            echo "<td><a href='routes.php?source=edit_route&edit_route={$route_id}'>Edit</a></td>";
+                            echo "<td><a href='routes.php?source=edit_routes&edit_route={$route_id}'>Edit</a></td>";
                             echo "<td><a href='routes.php?delete=$route_id'>Delete</a></td>";
                            
                             

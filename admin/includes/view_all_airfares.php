@@ -41,7 +41,38 @@ include("../database/db.php");
                         $airfare = $row['fare'];    
                             
 
-                $query1= "SELECT * FROM airlines_reservation_system.aeroplanes WHERE aeroplane_id = '{$aeroplane_id}' ";
+            //     $query1= "SELECT * FROM airlines_reservation_system.aeroplanes WHERE aeroplane_id = '{$aeroplane_id}' ";
+            //     $select_aeroplanes=mysqli_query($connection, $query1);
+            //     if(!$select_aeroplanes)
+            //     {
+            //         die('Error'.mysqli_error($connection));
+            //     }
+
+            //     while($row=mysqli_fetch_array($select_aeroplanes))
+            // {
+                
+            //             $aeroplane_id = $row['aeroplane_id'];
+            //             $aeroplane_number = $row['aeroplane_number'];
+            //             $aeroplane_brand = $row['aeroplane_brand'];
+
+            //     $query2= "SELECT * FROM airlines_reservation_system.routes";
+            //     $select_routes=mysqli_query($connection, $query2);
+            //     if(!$select_routes)
+            //     {
+            //         die('Error'.mysqli_error($connection));
+            //     }
+
+            //     while($row=mysqli_fetch_array($select_routes))
+            // {
+                
+            //             $route_id = $row['route_id'];
+            //             $route_starting_airport = $row['starting_airport'];
+            //             $route_destination = $row['destination'];
+
+                        echo "<tr>";
+                            echo   "<td>{$airfare_id}</td>";
+
+                              $query1= "SELECT * FROM airlines_reservation_system.aeroplanes WHERE aeroplane_id = '{$aeroplane_id}' ";
                 $select_aeroplanes=mysqli_query($connection, $query1);
                 if(!$select_aeroplanes)
                 {
@@ -54,8 +85,10 @@ include("../database/db.php");
                         $aeroplane_id = $row['aeroplane_id'];
                         $aeroplane_number = $row['aeroplane_number'];
                         $aeroplane_brand = $row['aeroplane_brand'];
+                            echo   "<td>{$aeroplane_number} {$aeroplane_brand}</td>";
+                        }
 
-                $query2= "SELECT * FROM airlines_reservation_system.routes";
+                        $query2= "SELECT * FROM airlines_reservation_system.routes";
                 $select_routes=mysqli_query($connection, $query2);
                 if(!$select_routes)
                 {
@@ -68,25 +101,22 @@ include("../database/db.php");
                         $route_id = $row['route_id'];
                         $route_starting_airport = $row['starting_airport'];
                         $route_destination = $row['destination'];
-
-                        echo "<tr>";
-                            echo   "<td>{$airfare_id}</td>";
-                            echo   "<td>{$aeroplane_number} {$aeroplane_brand}</td>";
                             echo   "<td>{$route_starting_airport} <i class='fas fa-arrows-alt-h'></i> {$route_destination} </td>";
+                        }
                             echo   "<td>&#8377; {$airfare}</td>";
                              
                             
 
                            
                            
-                            echo "<td><a href='airfares.php?source=edit_airfare&edit_airfare={$airfare_id}'>Edit</a></td>";
+                            echo "<td><a href='airfares.php?source=edit_airfares&edit_airfare={$airfare_id}'>Edit</a></td>";
                             echo "<td><a href='airfares.php?delete=$airfare_id'>Delete</a></td>";
                            
                             
                         echo "</tr>";  
                
-                        }
-                         }
+                      
+                         
                          }       
                                
                  

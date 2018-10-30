@@ -9,7 +9,7 @@ include("../database/db.php");
                                     <th>Aeroplane Id</th>
                                     <th>Aeroplane Number</th>
                                     <th>Aeroplane Brand</th>
-                                    <th>Aeroplane Capacity</th>
+                                   
                                    
                                     
                                     
@@ -35,19 +35,19 @@ include("../database/db.php");
                         $aeroplane_id = $row['aeroplane_id'];
                         $aeroplane_number = $row['aeroplane_number'];
                         $aeroplane_brand = $row['aeroplane_brand'];
-                        $aeroplane_capacity = $row['aeroplane_capacity'];    
+                           
                             
                         echo "<tr>";
                             echo   "<td>{$aeroplane_id}</td>";
                             echo   "<td>{$aeroplane_number}</td>";
                             echo   "<td>{$aeroplane_brand}</td>";
-                            echo   "<td>{$aeroplane_capacity}</td>";
+                            
                              
                             
 
                            
                            
-                            echo "<td><a href='aeroplanes.php?source=edit_aeroplane&edit_aeroplane={$aeroplane_id}'>Edit</a></td>";
+                            echo "<td><a href='aeroplanes.php?source=edit_aeroplanes&edit_aeroplane={$aeroplane_id}'>Edit</a></td>";
                             echo "<td><a href='aeroplanes.php?delete=$aeroplane_id'>Delete</a></td>";
                            
                             

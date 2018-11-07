@@ -20,10 +20,10 @@ passenger_signup();
 
 
     <!-- Page Content -->
-    <div id="user-signup" class="text-center">
+    <div id="user-signup" class="text-center" class="col-md-3">
 
-      <header id='signup-header'>
-            <h1><i class="fa fa-user-secret"> Passenger Signup</i></h1>
+      <header id='signup-header' style="color: green;">
+            <h1><i class="fa fa-user-plus"> Passenger Signup</i></h1>
             <h3 class="text-danger">
                 <?php
                     display_message();
@@ -32,20 +32,25 @@ passenger_signup();
             </header>
            
 </h3>
-        <div>         
-            <form class="text-center justify-content-center" action="" method="post" enctype="multipart/form-data">
+
+
+        <div class="row" style=" display: block; text-align: center;">         
+            <form class="text-center justify-content-center col-md-4" action="" method="post" enctype="multipart/form-data" class="form-group" style="display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;">
                <div class="form-group">
-                  <input type="text" name="username" class="form-inline box" placeholder="Username">
+                  <input type="text" name="username" class="form-control box" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="firstname" class="form-inline box" placeholder="First Name">
+                  <input type="text" name="firstname" class="form-control box" placeholder="First Name" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="lastname" class="form-inline box" placeholder="Last Name">
+                  <input type="text" name="lastname" class="form-control box" placeholder="Last Name" required>
                 </div>
-                 <div  class="form-group text-left">
+                 <div  class="form-group text-left"> 
                   <label for="age">Age</label>
-                  <select name='age'>
+                  <select name='age' required>
                     <?php 
                     for($i=1 ; $i<=120 ; $i++)
                     {
@@ -55,21 +60,21 @@ passenger_signup();
                   </select>
                 </div>
                 <!-- <div class="form-group">
-                  <input type="text" name="username" class="form-inline box" placeholder="Username">
+                  <input type="text" name="username" class="form-control box" placeholder="Username">
                 </div> -->
                 <div class="form-group">
-                  <input type="email" name="email" class="form-inline box" placeholder="Email">
+                  <input type="email" name="email" class="form-control box" placeholder="Email" required>
                 </div>
                  <div class="form-group">
-                  <input type="number" name="mobilenumber" class="form-inline box" placeholder="Mobile Number">
+                  <input type="number" name="mobilenumber" class="form-control box" placeholder="Mobile Number" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="address" class="form-inline box" placeholder="Address">
+                  <input type="text" name="address" class="form-control box" placeholder="Address" required>
                 </div>
                 <div class="form-group">
-                   <label for="nationality">Nationality</label>
+  <label for="nationality">Nationality</label>
 
-                  <select name="nationality">
+<select name="nationality" required required>
 
 <option value="">Country...</option>
 <option value="Afganistan">Afghanistan</option>
@@ -325,14 +330,14 @@ passenger_signup();
                 <div class="form-group text-left">
                 <label for="image">Passenger Image</label>
 
-                <input type="file" name="image" id="image" class="form-inline box">
+                <input type="file" name="image" id="image" class="form-control box" required>
                 </div>
 
                  <div class="form-group">
-                    <input type="password" name="password" class="form-inline box" placeholder="Password">
+                    <input type="password" name="password" class="form-control box" placeholder="Password" required>
                 </div>
                  <div class="form-group">
-                    <input type="password" name="confirmpassword" class="form-inline box" placeholder=" Re-enter Password">
+                    <input type="password" name="confirmpassword" class="form-control box" placeholder=" Re-enter Password" required>
                 </div>
 
 

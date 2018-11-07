@@ -88,6 +88,7 @@ $announcement_image = $_FILES['announcement_image']['name'];
      <div class="form-group">
         <label for="announcement_detail">Announcement Detail</label>
        <textarea class="form-control" name="announcement_detail" id="announcement_detail" cols="30" rows="10">
+        <?php echo $announcement_detail; ?>
         </textarea>
     </div>
 

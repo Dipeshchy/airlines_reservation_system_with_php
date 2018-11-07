@@ -17,7 +17,7 @@
                             while($row=fetch_array($query))
                             {
                               $starting_location = $row['starting_airport'];
-                              echo "<option value='$starting_airport'>{$starting_location}</option>";
+                              echo "<option value='{$starting_airport}'>{$starting_location}</option>";
                             }
 
                            ?>
@@ -52,8 +52,13 @@
                       </div>
                         </div>
                        		<br>
+                          <div class="text-center">
+                            <label>Date : </label>
+                            <input type="date" name="search_date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2018-12-20">
+                          </div>
+                          <br>
                         <span class="input-group-btn" style="margin: auto;">
-                            <button class="btn btn-default btn-success" type="submit" name='submit'>
+                            <button class="btn btn-default btn-success" type="submit" name='flightsearch'>
                                <i class="fas fa-search"></i> Search</span>
                         </button>
                         </span>

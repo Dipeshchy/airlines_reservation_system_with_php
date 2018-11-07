@@ -81,7 +81,7 @@ passenger_login();
             }
 
             ?>
-            <h5><?php echo $aeroplane_brand; ?></h5>
+            <h5 style="color:red;"><?php echo $aeroplane_brand; ?></h5>
             <table>
                 <tr>
                     <th>From</th>
@@ -105,6 +105,8 @@ passenger_login();
             <br>
             Discount Offer : <?php echo $discount_title; ?>
             &nbsp;&nbsp; &nbsp; &nbsp; &#8377; <?php echo $discount_amount; ?>
+            <br>
+            <b>Total Fare : &#8377; <?php echo $airfare-$discount_amount; ?></b>
             <br>
             
             <hr>

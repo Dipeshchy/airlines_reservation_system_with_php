@@ -116,7 +116,7 @@ if(isset($_POST['add_flight']))
 
     <div class="form-group">
         <label for="flight_date">Flight Date</label>
-        <input type="date" class="form-control" name="flight_date" id="flight_date">
+        <input type="date" class="form-control" name="flight_date" id="flight_date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2018-12-20">
     </div>
     
     

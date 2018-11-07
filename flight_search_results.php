@@ -62,6 +62,7 @@ passenger_login();
          {
         while($row=fetch_array($query))
         {
+            $flight_id = $row['flight_id'];
             $aeroplane_id = $row['aeroplane_id'];
 
              $reserved_seats = $row['reserved_seats'];
@@ -134,6 +135,13 @@ passenger_login();
             <br>
             <b>Total Fare : &#8377; <?php echo $airfare-$discount_amount; ?></b>
             <br>
+             <?php if($_SESSION['username'] !='')
+            {
+                ?>
+            <div class="text-center"><a href="./checkout.php?flight_id=<?php echo $flight_id; ?>"><button class="btn btn-primary">Book Tickets</button></a> </div>
+             <?php
+            }
+            ?>
             
             <hr>
             <?php
@@ -148,7 +156,7 @@ passenger_login();
 
 
     </div>
-    
+     
  			<!--  -->
 
 

@@ -43,7 +43,7 @@ passenger_login();
          ?>
          <div class="card-header">
         
-             <div class="display-4 text-center" id="faq-title">Frequently Asked Questions</div>
+             <div class="display-4 text-center" id="faq-title" style="font-weight: 500;">Frequently Asked Questions</div>
              </div>
              <div class="card">
                  

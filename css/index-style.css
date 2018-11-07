@@ -114,3 +114,11 @@ color: white;
      background-color: rgb(168, 144, 50);
       font-weight: 700;
 }*/
+#announcement-title
+{
+    transition: transform .2s;
+}
+#announcement-title:hover
+{
+    transform: scale(1.5);
+}

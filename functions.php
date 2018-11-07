@@ -182,7 +182,7 @@ function get_announcements()
 
 		?>
 		 <div class="col-lg-4" style="float: left;">
-		 <img src="images/announcements/<?php echo $announcements_image; ?>" alt="" class="col-lg-12">
+		 <img src="images/announcements/<?php echo $announcements_image; ?>" alt="" class="col-lg-12" height="200px">
 		 <h3 style="text-align: center; color: white; background-color: rgb(168, 144, 50);"><?php echo $announcements_title; ?></h3>
 		 <article  style="background-color: white; color: black;">
         <p style="background-color: white; color: black;" id="detail"><?php echo substr($announcements_detail,0,70); ?>..<a href='announcements.php?announcement_id=<?php echo $announcements_id;?>' id="seemore"> See more <a>   </p>

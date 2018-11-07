@@ -53,7 +53,7 @@ if(isset($_GET['announcement_id']))
 		 <h3 id='announcement-title' class="text-center"><?php echo $announcement_title; ?></h3>
          <img src="images/announcements/<?php echo $announcement_image; ?>" alt="" class="col-lg-3 rounded mx-auto d-block text-center">
 		 <article>
-        <p style="font-size: 120%;" id='announcement-detail'><?php echo $announcement_detail; ?>  </p>
+        <p style="font-size: 120%;" id='announcement-detail' class="card"><?php echo $announcement_detail; ?>  </p>
     </article>
 
 		 </div>

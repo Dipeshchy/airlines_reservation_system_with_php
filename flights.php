@@ -30,7 +30,7 @@ passenger_login();
 </div>
 
  <div class="col-lg-7 card mb-2 mt-5">
-    <h2 class="text-center mt-2">Flights</h2>
+    <h2 class="text-center mt-2 text-success">Flights</h2>
     <hr>
 
     <div>
@@ -40,6 +40,8 @@ passenger_login();
         confirm($query);
         while($row=fetch_array($query))
         {
+            $flight_id = $row['flight_id'];
+
             $aeroplane_id = $row['aeroplane_id'];
             $reserved_seats = $row['reserved_seats'];
             $vacant_seats = $row['vacant_seats'];
@@ -107,7 +109,16 @@ passenger_login();
             &nbsp;&nbsp; &nbsp; &nbsp; &#8377; <?php echo $discount_amount; ?>
             <br>
             <b>Total Fare : &#8377; <?php echo $airfare-$discount_amount; ?></b>
+           
             <br>
+            <?php if($_SESSION['username'] !='')
+            {
+                ?>
+            
+            <div class="text-center"><a href="checkout.php?flight_id=<?php echo $flight_id; ?>"><button class="btn btn-primary">Book Tickets</button></a> </div>
+            <?php
+            }
+            ?>
             
             <hr>
             <?php

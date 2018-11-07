@@ -19,6 +19,9 @@
                        
                         <li class="divider"></li>
                         <li>
+                            <a href="#"><i class="fa fa-plane"></i>My Tickets</a>
+                        </li>
+                        <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
@@ -48,7 +51,7 @@
 
     }
          ?>
-        <nav class="nav navbar-expand-sm bg-light-blue navbar-light">
+        <nav class="nav navbar-expand-sm bg-light-blue navbar-light" style="font-size: 20px; color: green;">
             <li class="nav-item">
                 <a class="nav-link" href="index.php">Home</a>
             </li>
@@ -59,8 +62,8 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Support</a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="faqs.php">FAQS</a>
-            <a class="dropdown-item" href="#contact">Contact number</a>
-            <a class="dropdown-item" href="#contact">Address</a>
+            <a class="dropdown-item" href="http://localhost/airlines/index.php#contact">Contact number</a>
+            <a class="dropdown-item" href="http://localhost/airlines/index.php#contact">Address</a>
             </div>
             </li>
           <!--   <li class="nav-item">

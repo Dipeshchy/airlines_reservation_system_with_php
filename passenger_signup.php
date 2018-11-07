@@ -343,7 +343,7 @@ passenger_signup();
 
                 <div class="form-group text-center" id="submit-back">
                   <input type="submit" name="signup" class="btn btn-primary" value="Sign Up">
-                  <input type="submit" name="back" class="btn btn-danger" value="Back">
+                  
                   
                    
                 </div>

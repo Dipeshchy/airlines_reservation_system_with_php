@@ -29,7 +29,7 @@ passenger_login();
     <div id="admin-login" class="text-center" style="margin-top: 10%;">
 
       <header id="admin-login-header">
-            <h1><i class="fa fa-user-secret"> Passenger Login</i></h1>
+            <h1 class="text-success"><i class="fa fa-user"> Passenger Login</i></h1>
             <h3 class="text-danger">
                 <?php
                     display_message();

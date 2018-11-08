@@ -86,9 +86,9 @@ passenger_login();
             <h5 style="color:red;"><?php echo $aeroplane_brand; ?></h5>
             <table>
                 <tr>
-                    <th>From</th>
+                    <th>From <i class="fas fa-plane-departure"></i></th>
                     <th><i class="fas fa-arrows-alt-h"></i></th>
-                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To <i class="fas fa-plane-arrival"></i></th>
                 </tr>
                 <tr>
                     <th><?php echo $starting_airport; ?></th>
@@ -98,10 +98,10 @@ passenger_login();
             </table>
             Vacant Seats :<?php echo $vacant_seats; ?><br>
             Flight Date : <?php echo $flight_date; ?>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            Departure Time: <?php echo $departure_time; ?>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            Arrival Time: <?php echo $arrival_time; ?>
+            &nbsp; &nbsp; &nbsp; 
+            <i class="fas fa-plane-departure"></i> Departure Time: <?php echo $departure_time; ?>
+            &nbsp; &nbsp; &nbsp; 
+            <i class="fas fa-plane-arrival"></i> Arrival Time: <?php echo $arrival_time; ?>
             <br>
             AirFare : &#8377; <?php echo $airfare; ?>
             <br>

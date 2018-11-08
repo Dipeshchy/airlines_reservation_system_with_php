@@ -69,13 +69,13 @@ include("includes/ads.php");
 
 
 <div id="contact" class="container card">
-        <h3 class="text-center col-md-12" style="float: left;">Contact Us</h3>
+        <h3 class="text-center col-md-12 text-primary" style="float: left;">Contact Us</h3>
         
             <table class="col-md-12">
                 <tr>
                     <td>
                         <section class="col-md-6">
-            <h5>Contact Number</h5>
+            <h5 class="text-info">Contact Number</h5>
             <ul>
                 <li><h6>Main Office :</h6>
                     <ul>
@@ -91,7 +91,7 @@ include("includes/ads.php");
 
         <td>
         <section class="col-md-12">
-            <h5>Address</h5>
+            <h5 class="text-info">Address</h5>
             <ul>
                 <li>hi</li>
                 <li>Ktm</li>

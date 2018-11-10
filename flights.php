@@ -111,7 +111,7 @@ passenger_login();
             <b>Total Fare : &#8377; <?php echo $airfare-$discount_amount; ?></b>
            
             <br>
-            <?php if($_SESSION['username'] !='')
+            <?php if(isset($_SESSION['username']))
             {
                 ?>
             

@@ -6,6 +6,7 @@ include('database/db.php');
     include_once('link_container.php');
     include_once('functions.php');
     session_start();
+    
 ?>
 
 <?php 

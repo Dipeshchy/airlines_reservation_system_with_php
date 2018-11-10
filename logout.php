@@ -2,7 +2,7 @@
 
 session_start();
 
-$_SESSION['username'] ='';
+unset($_SESSION['username']);
 
 header("Location: index.php");
 

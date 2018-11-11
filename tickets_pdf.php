@@ -23,16 +23,17 @@ if(isset($_POST['pay']))
 	$seats = $_POST['noofseats'];
 	$airfare = $_POST['airfare'];
 	$discount = $_POST['discount'];
-	$seatselected1 = $_POST['seatselected1'];
-	$seatselected2 = $_POST['seatselected2'];
-	$seatselected3 = $_POST['seatselected3'];
-	$seatselected4 = $_POST['seatselected4'];
-	$seatselected5 = $_POST['seatselected5'];
-	$seatselected6 = $_POST['seatselected6'];
-	$seatselected7 = $_POST['seatselected7'];
-	$seatselected8 = $_POST['seatselected8'];
-	$seatselected9 = $_POST['seatselected9'];
-	$seatselected10 = $_POST['seatselected10'];
+	$seat1 = $_POST['seat1'];
+	$seat2 = $_POST['seat2'];
+	$seat3 = $_POST['seat3'];
+	$seat4 = $_POST['seat4'];
+	$seat5 = $_POST['seat5'];
+	$seat6 = $_POST['seat6'];
+	$seat7 = $_POST['seat7'];
+	$seat8 = $_POST['seat8'];
+	$seat9 = $_POST['seat9'];
+	$seat10 = $_POST['seat10'];
+
 
 
 require("fpdf/fpdf.php");
@@ -60,46 +61,45 @@ $pdf->Cell(50,10,"Number Of Seats",0,0);
 $pdf->Cell(30,10,$seats,0,1);
 
 $pdf->Cell(50,10,"Seat Number",0,0);
-$pdf->Cell(10,10,$seatselected1,0,0);
+$pdf->Cell(10,10,$seat1,0,0);
 
-// if(!empty($seatselected2))
-// {
-// 	$pdf->Cell(10,10,$seatselected2,0,0);
-// }
+if(isset($seat2))
+{
+	$pdf->Cell(10,10,$seat2,0,0);
+}
+if(isset($seat3))
+{
+	$pdf->Cell(10,10,$seat3,0,0);
+}
+if(isset($seat4))
+{
+	$pdf->Cell(10,10,$seat4,0,0);
+}
+if(isset($seat5))
+{
+	$pdf->Cell(10,10,$seat5,0,0);
+}
+if(isset($seat6))
+{
+	$pdf->Cell(10,10,$seat6,0,0);
+}
 
-// if(!empty($seatselected3))
-// {
-// 	$pdf->Cell(10,10,$seatselected3,0,0);
-// }
-// if(!empty($seatselected4))
-// {
-// 	$pdf->Cell(10,10,$seatselected4,0,0);
-// }
-// if(!empty($seatselected5))
-// {
-// 	$pdf->Cell(10,10,$seatselected5,0,0);
-// }
-// if(!empty($seatselected6))
-// {
-// 	$pdf->Cell(10,10,$seatselected6,0,0);
-// }
-// if(!empty($seatselected7))
-// {
-// 	$pdf->Cell(10,10,$seatselected7,0,0);
-// }
-// if(!empty($seatselected8))
-// {
-// 	$pdf->Cell(10,10,$seatselected8,0,0);
-// }
-// if(!empty($seatselected9))
-// {
-// 	$pdf->Cell(10,10,$seatselected9,0,0);
-// }
-// if(!empty($seatselected10))
-// {
-// 	$pdf->Cell(10,10,$seatselected10,0,0);
-// }
-
+if(isset($seat7))
+{
+	$pdf->Cell(10,10,$seat7,0,0);
+}
+if(isset($seat8))
+{
+	$pdf->Cell(10,10,$seat8,0,0);
+}
+if(isset($seat9))
+{
+	$pdf->Cell(10,10,$seat9,0,0);
+}
+if(isset($seat10))
+{
+	$pdf->Cell(10,10,$seat10,0,0);
+}
 
 
 
@@ -135,16 +135,16 @@ $pdf->Cell(30,10,$passenger_nationality,0,1);
 $pdf->Output();
 }
 
-unset($_SESSION['seatselected1']);
-unset($_SESSION['seatselected2']);
-unset($_SESSION['seatselected3']);
-unset($_SESSION['seatselected4']);
-unset($_SESSION['seatselected5']);
-unset($_SESSION['seatselected6']);
-unset($_SESSION['seatselected7']);
-unset($_SESSION['seatselected8']);
-unset($_SESSION['seatselected9']);
-unset($_SESSION['seatselected10']);
+unset($_SESSION['seat1']);
+unset($_SESSION['seat2']);
+unset($_SESSION['seat3']);
+unset($_SESSION['seat4']);
+unset($_SESSION['seat5']);
+unset($_SESSION['seat6']);
+unset($_SESSION['seat7']);
+unset($_SESSION['seat8']);
+unset($_SESSION['seat9']);
+unset($_SESSION['seat10']);
 unset($_SESSION['seats']);
 unset($_SESSION['grand_total']);
  ?>

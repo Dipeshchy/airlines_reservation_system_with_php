@@ -137,418 +137,138 @@ passenger_login();
                            ?></td>
                            <td>
                             
-                              <table>
-                                   <tr>
-                                        <td>
-                                             
-                                             <form method="post">
-                                                  <span class="text-info">Seat 1</span>
-
-                                             <select name="seatside1">
-                                             <option value="A">A</option>
-                                             <option value="B">B</option>
-                                             <option value="C">C</option>
-                                             <option value="D">D</option>
-                                             </select>
-
-
-                                             <select name="seatnumber1">
-                                             <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                             ?>
-                                             </select>
-                                             <input type="submit" name="seat1" value="Confirm" class="btn btn-warning">
-
-                                             </form>
-                                             <?php 
-                                                  if(isset($_POST['seat1']))
-                                                  {
-                                                       $seatside1 = $_POST['seatside1'];
-                                                       $seatnumber1 = $_POST['seatnumber1'];
-                                                       $_SESSION['seatselected1'] =  $seatside1.$seatnumber1;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                             <br>
-                                          <button id="showseats2" class="btn btn-success">More</button></span> 
-                                       
-                                   </tr>
-                                   <tr>
-                                        <td>
-
-                                   <form id="seatsform2" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 2</span>                         
-                                     <select name="seatside2">
-                                        
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber2">
-                                       
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat2" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-
-                                         <?php 
-                                                  if(isset($_POST['seat2']))
-                                                  {
-                                                       $seatside2 = $_POST['seatside2'];
-                                                       $seatnumber2 = $_POST['seatnumber2'];
-                                                       $_SESSION['seatselected2'] =  $seatside2.$seatnumber2;
-
-                                                  }
-                                              ?>
-
-                                        </td>
-                                        <td>
-                                             <br>
-                                             <button id="showseats3" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <tr>
-                                        <td>
-
-                                   <form id="seatsform3" style="display: none;" method="post">  
-                                   <span class="text-info">Seat 3</span>                        
-                                     <select name="seatside3">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber3">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                    
-                                       <input type="submit" name="seat3" value="Confirm" class="btn btn-warning">
-                                  </form>
-                                   <?php 
-                                                  if(isset($_POST['seat3']))
-                                                  {
-                                                       $seatside3 = $_POST['seatside3'];
-                                                       $seatnumber3 = $_POST['seatnumber3'];
-                                                     $_SESSION['seatselected3'] =  $seatside3.$seatnumber3;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats4" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-
-                                   <!-- Forth -->
-                                   <tr>
-                                        <td>
-
-                                   <form id="seatsform4" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 4</span>                         
-                                     <select name="seatside4">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber4">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                    
-                                       <input type="submit" name="seat4" value="Confirm" class="btn btn-warning">
-                                  </form>
-                                   <?php 
-                                                  if(isset($_POST['seat4']))
-                                                  {
-                                                       $seatside4 = $_POST['seatside4'];
-                                                       $seatnumber4 = $_POST['seatnumber4'];
-                                                       $seatselected4 =  $seatside4.$seatnumber4;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats5" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <!-- fifth -->
-                                         <tr>
-                                        <td>
-
-                                   <form id="seatsform5" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 5</span>                         
-                                     <select name="seatside5">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber5">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat5" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                   <?php 
-                                                  if(isset($_POST['seat5']))
-                                                  {
-                                                       $seatside5 = $_POST['seatside5'];
-                                                       $seatnumber5 = $_POST['seatnumber5'];
-                                                       $seatselected5 =  $seatside5.$seatnumber5;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats6" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                  
-                                  <!-- sixth -->
-                                             <tr>
-                                        <td>
-
-                                   <form id="seatsform6" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 6</span>                         
-                                     <select name="seatside6">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber6">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat6" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                      <?php 
-                                                  if(isset($_POST['seat6']))
-                                                  {
-                                                       $seatside6 = $_POST['seatside6'];
-                                                       $seatnumber6 = $_POST['seatnumber6'];
-                                                       $seatselected6 =  $seatside6.$seatnumber6;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats7" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <!-- seventh -->
-                                              <tr>
-                                        <td>
-
-                                   <form id="seatsform7" style="display: none;" method="post">
-                                   <span class="text-info">Seat 7</span>                          
-                                     <select name="seatside7">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber7">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat7" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                     <?php 
-                                                  if(isset($_POST['seat7']))
-                                                  {
-                                                       $seatside7 = $_POST['seatside7'];
-                                                       $seatnumber7 = $_POST['seatnumber7'];
-                                                       $seatselected7 =  $seatside7.$seatnumber7;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats8" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <!-- eight -->
-                                              <tr>
-                                        <td>
-
-                                   <form id="seatsform8" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 8</span>                         
-                                     <select name="seatside8">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber8">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat8" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                    <?php 
-                                                  if(isset($_POST['seat8']))
-                                                  {
-                                                       $seatside8 = $_POST['seatside8'];
-                                                       $seatnumber8 = $_POST['seatnumber8'];
-                                                       $seatselected8 =  $seatside8.$seatnumber8;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats9" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <!-- ninth -->
-                                              <tr>
-                                        <td>
-
-                                   <form id="seatsform9" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 9</span>                         
-                                     <select name="seatside9">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber9">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat9" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                    <?php 
-                                                  if(isset($_POST['seat9']))
-                                                  {
-                                                       $seatside9 = $_POST['seatside9'];
-                                                       $seatnumber9 = $_POST['seatnumber9'];
-                                                       $seatselected9 =  $seatside9.$seatnumber9;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats10" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                                   <!-- tenth -->
-                                              <tr>
-                                        <td>
-
-                                   <form id="seatsform10" style="display: none;" method="post"> 
-                                   <span class="text-info">Seat 10</span>                         
-                                     <select name="seatside10">
-                                          <option value="A">A</option>
-                                          <option value="B">B</option>
-                                          <option value="C">C</option>
-                                          <option value="D">D</option>
-                                     </select>
-                                
-                           
-                                   <select name="seatnumber10">
-                                          <?php 
-                                             for($j=1;$j<=20;$j++)
-                                             {
-                                                  echo "<option value='{$j}'>$j</option>";
-                                             }
-                                           ?>
-                                     </select>
-                                     <input type="submit" name="seat10" value="Confirm" class="btn btn-warning">
-                                      
-                                  </form>
-                                    <?php 
-                                                  if(isset($_POST['seat10']))
-                                                  {
-                                                       $seatside10 = $_POST['seatside10'];
-                                                       $seatnumber10 = $_POST['seatnumber10'];
-                                                       $seatselected10 =  $seatside10.$seatnumber10;
-
-                                                  }
-                                              ?>
-                                        </td>
-                                        <td>
-                                               <br>
-                                              <button id="showseats11" class="btn btn-success" style="display: none;">More</button>
-                                        </td>
-                                   </tr>
-                              </table>     
-                      
                                    
                                    <!-- Test -->
 
+                                   <form method="post" class="form-group">
+                                        <?php 
+                                        if(isset($_SESSION['seats']))
+                                        {
 
-                         
+                                             for($j=1;$j<=$_SESSION['seats'];$j++)
+                                             {
+                                                  ?>
+                                                       <select class="form-control" name="seat<?php echo $j; ?>">
+                                                            <option value=""></option>
+                                                          <?php  for($a=1;$a<10;$a++)
+                                                          {
+                                                            ?>
+                                                          <option value="A<?php echo $a; ?>">A<?php echo $a; ?></option>
+                                                          <?php } ?>
+                                                           <?php  for($b=1;$b<10;$b++)
+                                                          {
+                                                            ?>
+                                                          <option value="B<?php echo $b; ?>">B<?php echo $b; ?></option>
+                                                          <?php } ?>
+                                                           <?php  for($c=1;$c<10;$c++)
+                                                          {
+                                                            ?>
+                                                          <option value="C<?php echo $c; ?>">C<?php echo $c; ?></option>
+                                                          <?php } ?>
+                                                           <?php  for($d=1;$d<10;$d++)
+                                                          {
+                                                            ?>
+                                                          <option value="D<?php echo $d; ?>">D<?php echo $d; ?></option>
+                                                          <?php } ?>
+                                                       </select>
+                                                  <?php
+                                             }
+
+                                         ?>
+                                         <input type="submit" name="hunchha" value="Confirm" class="btn btn-warning">
+                                   </form>
+                         <?php 
+                    }
+                              if(isset($_POST['hunchha']))
+                              {
+                                   
+                                        $_SESSION['seat1'] = $_POST['seat1'];
+                                        if(isset($_POST['seat2']))
+                                        {
+                                            $_SESSION['seat2'] = $_POST['seat2']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat2'] = '';
+                                        }
+
+                                          if(isset($_POST['seat3']))
+                                        
+                                        {
+                                            $_SESSION['seat3'] = $_POST['seat3']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat3'] = '';
+                                        }
+
+                                          if(isset($_POST['seat4']))
+                                        {
+                                            $_SESSION['seat4'] = $_POST['seat4']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat4'] = '';
+                                        }
+
+                                          if(isset($_POST['seat5']))
+                                        {
+                                            $_SESSION['seat5'] = $_POST['seat5']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat5'] = '';
+                                        }
+
+                                          if(isset($_POST['seat6']))
+                                        {
+                                            $_SESSION['seat6'] = $_POST['seat6']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat6'] = '';
+                                        }
+
+                                          if(isset($_POST['seat7']))
+                                        {
+                                            $_SESSION['seat7'] = $_POST['seat7']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat7'] = '';
+                                        }
+
+                                          if(isset($_POST['seat8']))
+                                        {
+                                            $_SESSION['seat8'] = $_POST['seat8']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat8'] = '';
+                                        }
+
+                                          if(isset($_POST['seat9']))
+                                        {
+                                            $_SESSION['seat9'] = $_POST['seat9']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat9'] = '';
+                                        }
+
+                                          if(isset($_POST['seat10']))
+                                        {
+                                            $_SESSION['seat10'] = $_POST['seat10']; 
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['seat10'] = '';
+                                        }
+
+                                        
+                                   
+                              }
+                          ?>
 
                                    <!-- Test -->
                            </td>
@@ -582,16 +302,16 @@ passenger_login();
                <input type="hidden" name="noofseats" value="<?php echo $_SESSION['seats']; ?>">
                <input type="hidden" name="airfare" value="<?php echo $airfare; ?>">
                 <input type="hidden" name="discount" value="<?php echo $discount_amount; ?>">
-                <input type="hidden" name="seatselected1" value="<?php echo $_SESSION['seatselected1'] ?>">
-                <input type="hidden" name="seatselected2" value="<?php echo $_SESSION['seatselected2'] ?>">
-                <input type="hidden" name="seatselected3" value="<?php echo $_SESSION['seatselected3'] ?>">
-                <input type="hidden" name="seatselected4" value="<?php echo $_SESSION['seatselected4'] ?>">
-                <input type="hidden" name="seatselected5" value="<?php echo $_SESSION['seatselected5'] ?>">
-                <input type="hidden" name="seatselected6" value="<?php echo $_SESSION['seatselected6'] ?>">
-                <input type="hidden" name="seatselected7" value="<?php echo $_SESSION['seatselected7'] ?>">
-                <input type="hidden" name="seatselected8" value="<?php echo $_SESSION['seatselected8'] ?>">
-                <input type="hidden" name="seatselected9" value="<?php echo $_SESSION['seatselected9'] ?>">
-                <input type="hidden" name="seatselected10" value="<?php echo $_SESSION['seatselected10'] ?>">
+               <input type="hidden" name="seat1" value="<?php echo $_SESSION['seat1'] ?>">
+                <input type="hidden" name="seat2" value="<?php echo $_SESSION['seat2'] ?>">
+                <input type="hidden" name="seat3" value="<?php echo $_SESSION['seat3'] ?>">
+                <input type="hidden" name="seat4" value="<?php echo $_SESSION['seat4'] ?>">
+                <input type="hidden" name="seat5" value="<?php echo $_SESSION['seat5'] ?>">
+                <input type="hidden" name="seat6" value="<?php echo $_SESSION['seat6'] ?>">
+                <input type="hidden" name="seat7" value="<?php echo $_SESSION['seat7'] ?>">
+                <input type="hidden" name="seat8" value="<?php echo $_SESSION['seat8'] ?>">
+                <input type="hidden" name="seat9" value="<?php echo $_SESSION['seat9'] ?>">
+                <input type="hidden" name="seat10" value="<?php echo $_SESSION['seat10'] ?>"> 
      		<br>
      		<div class="text-center"><input type="submit" name="pay" value="Pay" class="btn btn-warning"></div>
      	</form>

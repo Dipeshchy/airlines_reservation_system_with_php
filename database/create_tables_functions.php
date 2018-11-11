@@ -198,4 +198,15 @@ function faqs_table()
 	confirm1($query_create_faqs_table);
 }
 
+function seats_table()
+{
+	$query_create_seats_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.seats(
+		seat_id int AUTO_INCREMENT PRIMARY KEY,
+		aeroplane_id int,
+		passenger_id int,
+		aeroplane_capacity int,
+		seat_number varchar(150)
+) ");
+}
+
 ?>

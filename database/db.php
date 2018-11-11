@@ -18,5 +18,6 @@ announcements_table();
 airports_table();
 flights_table();
 faqs_table();
+seats_table()
 
 ?>

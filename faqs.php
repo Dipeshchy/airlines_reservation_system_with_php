@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>FAQS</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src='js/jquery.js'></script>
     <!--  <script type="text/javascript">
            $(document).ready(function(){
         
@@ -43,7 +44,7 @@ passenger_login();
          ?>
          <div class="card-header">
         
-             <div class="display-4 text-center" id="faq-title" style="font-weight: 500;">Frequently Asked Questions</div>
+             <div class="display-4 text-center text-warning" id="faq-title" style="font-weight: 500;">Frequently Asked Questions</div>
              </div>
              <div class="card">
                  
@@ -60,8 +61,8 @@ passenger_login();
                         
                         
                             
-                                echo "<h5 class='question'><i class='fas fa-question-circle'>$faq_question</i></h5>";
-                                echo "<div class='answer' style='display:none;'><i class='fas fa-arrow-circle-right'>$faq_answer</i>";
+                                echo "<h5 class='question text-danger'><i class='fas fa-question-circle'>$faq_question</i></h5>";
+                                echo "<div class='answer text-primary' style='display:none;'><i class='fas fa-arrow-circle-right'>$faq_answer</i>";
                                 echo "</div>";
                             
                             

@@ -1,4 +1,4 @@
- <?php
+<?php
 include "includes/header.php";
 
 
@@ -36,16 +36,16 @@ include "includes/header.php";
                         }
                         switch ($source)
                         {
-                            case 'add_admin';
-                                include "includes/add_admin.php";
-                                break;
+                            // case 'add_passenger';
+                            //     include "includes/add_passenger.php";
+                            //     break;
                                 
-                            case 'edit_admin';
-                                include "includes/edit_admin.php";
+                            case 'edit_passenger';
+                                include "includes/edit_tickets.php";
                                 break;
                                 
                             default:
-                                include "includes/view_all_admin.php";
+                                include "includes/view_all_tickets.php";
                                 break;
                                 
                         }
@@ -60,12 +60,3 @@ include "includes/header.php";
             <!-- /.container-fluid -->
 
         </div>
-        <!-- /#page-wrapper -->
-
- <!--    <?php
-        // include "includes/admin_footer.php";
-        
-        
-        
-        ?>
- -->

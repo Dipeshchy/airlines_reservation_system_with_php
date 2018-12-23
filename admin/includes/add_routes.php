@@ -26,7 +26,7 @@ if(isset($_POST['add_route']))
     
  
 
-  echo "route added"." "."<a href='routes.php'> View routes</a>";
+  echo "Route added"." "."<a href='routes.php'> View routes</a>";
     
 }
 
@@ -52,20 +52,31 @@ if(isset($_POST['add_route']))
         <label for="route_start">Route Starting Airport</label>
         <br>
         <select name="route_starting_airport">
-            <?php 
-                $query1=execute_query("SELECT * FROM airlines_reservation_system.airports");
-                confirm($query1);
-                while($row = fetch_array($query1))
+        <!--     <?php 
+                // $query1=execute_query("SELECT * FROM airlines_reservation_system.airports");
+                // confirm($query1);
+                // while($row = fetch_array($query1))
                 {
-                    $airport_id = $row['airport_id'];
-                    $airport_location = $row['airport_location'];
+                    // $airport_id = $row['airport_id'];
+                    // $airport_location = $row['airport_location'];
 
-                    echo "<option value='{$airport_location}'>{$airport_location}</option>";
+                    // echo "<option value='{$airport_location}'>{$airport_location}</option>";
                 }
 
 
 
-             ?>
+             ?> -->
+                        <option value="Kathmandu">Kathmandu</option>
+                        <option value="Biratnagar">Biratnagar</option>
+                        <option value="Lukla">Lukla</option>
+                        <option value="Bhadrapur">Bhadrapur</option>
+                        <option value="Rajbiraj">Rajbiraj</option>
+                        <option value="Janakpur">Janakpur</option>
+                        <option value="Bharatpur">Bharatpur</option>
+                        <option value="Pokhara">Pokhara</option>
+                        <option value="Bhairahwa">Bhairahwa</option>
+                        <option value="Nepalgunj">Nepalgunj</option>
+                        <option value="Dhangadi">Dhangadi</option>
         </select>
        <!--  <input type="text" class="form-control" name="route_starting_airport" id="route_start"> -->
     </div>
@@ -77,20 +88,31 @@ if(isset($_POST['add_route']))
         <label for="route_destination">Route Destination</label>
         <br>
         <select name="route_destination">
-            <?php 
-                $query1=execute_query("SELECT * FROM airlines_reservation_system.airports");
-                confirm($query1);
-                while($row = fetch_array($query1))
-                {
-                    $airport_id = $row['airport_id'];
-                    $airport_location = $row['airport_location'];
+          <!--   <?php 
+                // $query1=execute_query("SELECT * FROM airlines_reservation_system.airports");
+                // confirm($query1);
+                // while($row = fetch_array($query1))
+                // {
+                //     $airport_id = $row['airport_id'];
+                //     $airport_location = $row['airport_location'];
 
-                    echo "<option value='{$airport_location}'>{$airport_location}</option>";
-                }
+                //     echo "<option value='{$airport_location}'>{$airport_location}</option>";
+               // }
 
 
 
-             ?>
+             ?> -->
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Biratnagar">Biratnagar</option>
+                <option value="Lukla">Lukla</option>
+                <option value="Bhadrapur">Bhadrapur</option>
+                <option value="Rajbiraj">Rajbiraj</option>
+                <option value="Janakpur">Janakpur</option>
+                <option value="Bharatpur">Bharatpur</option>
+                <option value="Pokhara">Pokhara</option>
+                <option value="Bhairahwa">Bhairahwa</option>
+                <option value="Nepalgunj">Nepalgunj</option>
+                <option value="Dhangadi">Dhangadi</option>
         </select>
         <!-- <input type="text" class="form-control" name="route_destination" id="route_destination"> -->
     </div>

@@ -6,17 +6,6 @@ background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Fire
 
 font-family: 'Alegreya';
 }
-.justify-content-end a 
-{
-    font-size: 120%;
-    color: red;
-}
-.justify-content-end a:hover
-{
-    /*font-size: 150%;*/
-
-    
-}
 
 .content {
     position: fixed;
@@ -26,17 +15,7 @@ font-family: 'Alegreya';
     width: 100%;
     padding: 20px;
 }
-/*#admin-login
-{
-    
-    margin: 92px 300px 300px 530px;
-    width: 500px;
-    
-}
-#admin-login-header
-{
-    margin-left: -58px;
-}*/
+
 #admin-login div form div 
 {
     font-size: 130%;
@@ -57,43 +36,13 @@ form{
 #section-head
 {
     font-size: 300%;
-    color: red;
+    
 }
 .how
 {
     float: left;
 }
-/*#submit-back
-{
-        margin-left: -153px;
-}*/
-/*#admin-sidenav
-{
-    background-color: black;
 
-    width: 149px;
-    height: 698px;
-        margin-top: 12px;
-color: white;
-    }
-
-#admin-topnav
-{
-        background-color: black;
-        color:white;
-        
-    }*/
-/*#user-signup
-{
-    
-    margin: 92px 300px 300px 530px;
-    width: 500px;
-    
-}*/
-/*#ser-signup header
-{
-    margin-left: -58px;
-}*/
 #user-signup div form div 
 {
     font-size: 130%;
@@ -108,17 +57,4 @@ color: white;
         margin-right: 303px;
         font-weight: 500;
 }
-/*#announcement-title{
-    text-align: center; 
-     color: white; 
-     background-color: rgb(168, 144, 50);
-      font-weight: 700;
-}*/
-#announcement-title
-{
-    transition: transform .2s;
-}
-#announcement-title:hover
-{
-    transform: scale(1.5);
-}
+

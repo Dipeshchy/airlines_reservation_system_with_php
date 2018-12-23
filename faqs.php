@@ -35,18 +35,19 @@ passenger_login();
 
  ?>
 
-     <div class="container">
+    
         <div id="header">
         <?php 
 
             include('includes/header.php');
 
          ?>
+         <div class="container">
          <div class="card-header">
         
-             <div class="display-4 text-center text-warning" id="faq-title" style="font-weight: 500;">Frequently Asked Questions</div>
+             <div class="display-4 text-center" id="faq-title" style="font-weight: 500;color: white;">Frequently Asked Questions</div>
              </div>
-             <div class="card">
+             <div class="">
                  
                     <?php 
                         $query = execute_query("SELECT * FROM airlines_reservation_system.faqs");
@@ -61,8 +62,8 @@ passenger_login();
                         
                         
                             
-                                echo "<h5 class='question text-danger'><i class='fas fa-question-circle'>$faq_question</i></h5>";
-                                echo "<div class='answer text-primary' style='display:none;'><i class='fas fa-arrow-circle-right'>$faq_answer</i>";
+                                echo "<h5 class='question' style='color:red;'><i class='fas fa-question-circle'>$faq_question</i></h5>";
+                                echo "<div class='answer' style='display:none;color:green;'><i class='fas fa-arrow-circle-right'>$faq_answer</i>";
                                 echo "</div>";
                             
                             

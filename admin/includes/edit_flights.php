@@ -18,7 +18,7 @@ include('../functions.php');
         {
             $aeroplane_id = $row['aeroplane_id'];
             $aeroplane_capacity = $row['aeroplane_capacity'];
-            $reserved_seats = $row['reserved_seats'];
+            $reserved_seats = 0;
             $vacant_seats = $row['vacant_seats'];
             $flight_date = $row['flight_date'];
             $departure_time = $row['departure_time'];
@@ -119,10 +119,10 @@ header('Location:flights.php');
         <input type="number" class="form-control" name="aeroplane_capacity" id="aeroplane_capacity" value="<?php echo $aeroplane_capacity; ?>">
     </div>
 
-    <div class="form-group">
+   <!--  <div class="form-group">
         <label for="reserved_seats">Reserved Seats</label>
         <input type="number" name="reserved_seats" id="reserved_seats" class="form-control" value="<?php echo $reserved_seats; ?>">
-    </div>
+    </div> -->
 
     <div class="form-group">
         <label for="flight_date">Flight Date</label>
@@ -209,7 +209,7 @@ header('Location:flights.php');
 
     <div class="form-group">
         
-        <input type="submit" class="btn btn-primary" name="add_flight" value="Add flight">
+        <input type="submit" class="btn btn-primary" name="edit_flight" value="Edit flight">
     </div>
     
 </form> 

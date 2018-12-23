@@ -77,12 +77,7 @@ admin_login();
 
         <!-- Footer -->
         
-    <?php 
-
-    include("includes/footer.php");
-
-     ?>
-
+  
     
     <!-- /.container -->
 

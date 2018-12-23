@@ -10,14 +10,11 @@ admin_table();
 passengers_table();
 aeroplane_table();
 route_table();
-airfare_table();
-flight_schedule_table();
 discounts_table();
-transaction_table();
 announcements_table();
-airports_table();
+// airports_table();
 flights_table();
 faqs_table();
-seats_table()
+tickets_table();
 
 ?>

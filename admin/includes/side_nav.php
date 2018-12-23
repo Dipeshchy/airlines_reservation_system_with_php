@@ -58,7 +58,7 @@
                         </ul>
                     </li> -->
 
-
+<!-- 
                      <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#airport_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Airport <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="airport_dropdown" class="collapse">
@@ -69,7 +69,7 @@
                                 <a href="airports.php?source=add_airports">Add Airport</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                   
                        <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#aeroplane_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Aeroplanes <i class="fa fa-fw fa-caret-down"></i></a>
@@ -79,6 +79,18 @@
                             </li>
                             <li>
                                 <a href="aeroplanes.php?source=add_aeroplanes">Add Aeroplanes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                      <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#routes_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Routes <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="routes_dropdown" class="collapse">
+                            <li>
+                                <a href="./routes.php">View All Routes</a>
+                            </li>
+                            <li>
+                                <a href="routes.php?source=add_routes">Add Routes</a>
                             </li>
                         </ul>
                     </li>
@@ -112,17 +124,7 @@
                         </ul>
                     </li>
  -->
-                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#routes_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Routes <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="routes_dropdown" class="collapse">
-                            <li>
-                                <a href="./routes.php">View All Routes</a>
-                            </li>
-                            <li>
-                                <a href="routes.php?source=add_routes">Add Routes</a>
-                            </li>
-                        </ul>
-                    </li>
+                   
 
                   <!--   <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#airfare_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Air Fares <i class="fa fa-fw fa-caret-down"></i></a>
@@ -152,10 +154,15 @@
 
                     
 
-                    <li class="active">
-                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Transactions </a>
+                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#ticket_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Tickets <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="ticket_dropdown" class="collapse">
+                            <li>
+                                <a href="./tickets.php">View All Tickets</a>
+                            </li>
+                        </ul>
                     </li>
-
+                    
                    
 
                     <!-- <li>

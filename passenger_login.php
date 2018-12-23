@@ -57,7 +57,8 @@ passenger_login();
                    
                 </div>
                 
-            </form>            
+            </form>  
+            <p style="color: green;">Not yet a member? Sign Up <a href="passenger_signup.php" style="color: red;">here..</a></p>          
         </div>  
         </div>
 
@@ -66,11 +67,7 @@ passenger_login();
 
         <!-- Footer -->
         
-    <?php 
-
-    include("includes/footer.php");
-
-     ?>
+ 
 
     
     <!-- /.container -->

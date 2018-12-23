@@ -14,7 +14,7 @@ passenger_login();
 
  ?>
  <body>
-     <div class="container">
+     <div class="">
         
         <?php 
 
@@ -38,6 +38,9 @@ passenger_login();
 
         $query = execute_query("SELECT * FROM airlines_reservation_system.flights");
         confirm($query);
+        if (mysqli_num_rows($query) == 0) {
+            echo "<h3 class='text-danger'>No Flights</h3>";
+        }
         while($row=fetch_array($query))
         {
             $flight_id = $row['flight_id'];
@@ -51,6 +54,8 @@ passenger_login();
             $route_id = $row['route_id'];
             $airfare = $row['airfare'];
             $discount_id = $row['discount_id'];
+            $status = $row['status'];
+            if($status == 'pending'){
 
             $query1 = execute_query("SELECT * FROM airlines_reservation_system.aeroplanes WHERE aeroplane_id = {$aeroplane_id} ");
             confirm($query1);
@@ -88,7 +93,7 @@ passenger_login();
                 <tr>
                     <th>From <i class="fas fa-plane-departure"></i></th>
                     <th><i class="fas fa-arrows-alt-h"></i></th>
-                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To <i class="fas fa-plane-arrival"></i></th>
+                    <th>&nbsp;&nbsp;&nbsp;To <i class="fas fa-plane-arrival"></i></th>
                 </tr>
                 <tr>
                     <th><?php echo $starting_airport; ?></th>
@@ -118,11 +123,14 @@ passenger_login();
             <div class="text-center"><a href="checkout.php?flight_id=<?php echo $flight_id; ?>"><button class="btn btn-primary">Book Tickets</button></a> </div>
             <?php
             }
+            else {
+                echo "<h6 class='text-center text-warning'>Please login to book flights</h6>";
+            }
             ?>
             
             <hr>
             <?php
-
+}
         }
 
 
@@ -138,7 +146,7 @@ passenger_login();
 
              ?>
                  
-             </div>      
+             </div>    
  			<!--  -->
 
 

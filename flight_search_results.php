@@ -14,7 +14,7 @@ passenger_login();
  ?>
 
  <body>
-     <div class="container">
+     <div class="">
         
         <?php 
 
@@ -113,7 +113,7 @@ passenger_login();
                 <tr>
                     <th>From <i class="fas fa-plane-departure"></i></th>
                     <th><i class="fas fa-arrows-alt-h"></i></th>
-                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To <i class="fas fa-plane-arrival"></i></th>
+                    <th>&nbsp;&nbsp;&nbsp;To <i class="fas fa-plane-arrival"></i></th>
                 </tr>
                 <tr>
                     <th><?php echo $starting_airport; ?></th>
@@ -140,6 +140,8 @@ passenger_login();
                 ?>
             <div class="text-center"><a href="./checkout.php?flight_id=<?php echo $flight_id; ?>"><button class="btn btn-primary">Book Tickets</button></a> </div>
              <?php
+            } else {
+                echo "<h6 class='text-center text-warning'>Please login to book flights</h6>";
             }
             ?>
             
@@ -156,6 +158,13 @@ passenger_login();
 
 
     </div>
+       <div class="col-md-5"><?php 
+
+            include('includes/flights_side_bar.php');
+
+             ?>
+                 
+             </div>  
      
  			<!--  -->
 

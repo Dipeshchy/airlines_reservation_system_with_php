@@ -19,7 +19,7 @@ if(isset($_POST['add_flight']))
     $aeroplane_id=$_POST['aeroplane_id'];
     
 
-    $reserved_seats = $_POST['reserved_seats'];
+    $reserved_seats = 0;
     
 
     $aeroplane_capacity = $_POST['aeroplane_capacity'];
@@ -40,6 +40,7 @@ if(isset($_POST['add_flight']))
     $route_id = $_POST['route_id'];
     $airfare = $_POST['airfare'];
     $discount_id = $_POST['discount_id'];
+    $status = "pending";
 
     
     
@@ -49,7 +50,7 @@ if(isset($_POST['add_flight']))
     
     
     
-    $query = execute_query("INSERT INTO airlines_reservation_system.flights(aeroplane_id, aeroplane_capacity, reserved_seats, vacant_seats ,  flight_date , departure_time , arrival_time , route_id , airfare , discount_id) VALUES('{$aeroplane_id}', '{$aeroplane_capacity}', '{$reserved_seats}',$vacant_seats ,'{$flight_date}','{$departure_time}','{$arrival_time}','{$route_id}', '{$airfare}','{$discount_id}') ");
+    $query = execute_query("INSERT INTO airlines_reservation_system.flights(aeroplane_id, aeroplane_capacity, reserved_seats, vacant_seats ,  flight_date , departure_time , arrival_time , route_id , airfare , discount_id,status) VALUES('{$aeroplane_id}', '{$aeroplane_capacity}', '{$reserved_seats}',$vacant_seats ,'{$flight_date}','{$departure_time}','{$arrival_time}','{$route_id}', '{$airfare}','{$discount_id}','{$status}') ");
 
         confirm($query);
     
@@ -109,14 +110,14 @@ if(isset($_POST['add_flight']))
         ">
     </div>
 
-    <div class="form-group">
+   <!--  <div class="form-group">
         <label for="reserved_seats">Reserved Seats</label>
         <input type="number" name="reserved_seats" id="reserved_seats" class="form-control">
-    </div>
+    </div> -->
 
     <div class="form-group">
         <label for="flight_date">Flight Date</label>
-        <input type="date" class="form-control" name="flight_date" id="flight_date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2018-12-20">
+        <input type="date" class="form-control" name="flight_date" id="flight_date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="2018-12-30">
     </div>
     
     

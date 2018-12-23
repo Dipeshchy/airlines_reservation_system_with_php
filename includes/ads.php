@@ -1,4 +1,4 @@
-<div class="container" id="advertisements">
+<div class="" id="advertisements">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 
 					<!-- Indicators -->
@@ -10,7 +10,7 @@
 						<li data-target="#demo" data-slide-to="4"></li>
 						<li data-target="#demo" data-slide-to="5"></li>
 						<li data-target="#demo" data-slide-to="6"></li>
-						<li data-target="#demo" data-slide-to="7"></li>
+						<!-- <li data-target="#demo" data-slide-to="7"></li>
 						<li data-target="#demo" data-slide-to="8"></li>
 						<li data-target="#demo" data-slide-to="9"></li>
 						<li data-target="#demo" data-slide-to="10"></li>
@@ -19,63 +19,64 @@
 						<li data-target="#demo" data-slide-to="13"></li>
 						<li data-target="#demo" data-slide-to="14"></li>
 						<li data-target="#demo" data-slide-to="15"></li>
-						<li data-target="#demo" data-slide-to="16"></li>
+						<li data-target="#demo" data-slide-to="16"></li> -->
 
 					</ul>
 
 					<!-- The slideshow -->
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="images/advertisements/airportsinnepal.jpg" width="1200" height="400">
+							<img src="images/advertisements/simrik.jpg" width="100%" height="500s">
+						</div>
+						<div class="carousel-item">
+							<img src="images/advertisements/airportsinnepal.jpg" width="100%" height="500">
 
 						</div>
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/a.jpg." width="100%" height="500">
+						</div> -->
 						<div class="carousel-item">
-							<img src="images/advertisements/a.jpg." width="1200" height="400">
+							<img src="images/advertisements/alnepal.jpg" width="100%" height="500">
+						</div>
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/aviationnepal.jpg" width="100%" height="500">
+						</div> -->
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/buytickets.jpg" width="100%" height="500">
+						</div> -->
+					<!-- 	<div class="carousel-item">
+							<img src="images/advertisements/ecotravels.jpg" width="100%" height="500">
+						</div> -->
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/emirates.jpg" width="100%" height="500">
+						</div> -->
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/himalayan.jpg" width="100%" height="500">
+						</div> -->
+						<div class="carousel-item">
+							<img src="images/advertisements/mountainnepal.jpg" width="100%" height="500">
 						</div>
 						<div class="carousel-item">
-							<img src="images/advertisements/alnepal.jpg" width="1200" height="400">
+							<img src="images/advertisements/mteverest.jpg" width="100%" height="500">
 						</div>
 						<div class="carousel-item">
-							<img src="images/advertisements/aviationnepal.jpg" width="1200" height="400">
+							<img src="images/advertisements/pilot.jpg" width="100%" height="500">
+						</div>
+						<!-- <div class="carousel-item">
+							<img src="images/advertisements/pilot.jpg" width="100%" height="500">
+						</div> -->
+					<!-- 	<div class="carousel-item">
+							<img src="images/advertisements/sita.jpg" width="100%" height="500">
 						</div>
 						<div class="carousel-item">
-							<img src="images/advertisements/buytickets.jpg" width="1200" height="400">
+							<img src="images/advertisements/yeti.jpg" width="100%" height="500">
 						</div>
 						<div class="carousel-item">
-							<img src="images/advertisements/ecotravels.jpg" width="1200" height="400">
-						</div>
+							<img src="images/advertisements/fishtail.jpg" width="100%" height="500s">
+						</div> -->
+						
 						<div class="carousel-item">
-							<img src="images/advertisements/emirates.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/himalayan.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/mountainnepal.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/mteverest.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/pilot.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/pilot.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/sita.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/yeti.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/fishtail.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/simrik.jpg" width="1200" height="400">
-						</div>
-						<div class="carousel-item">
-							<img src="images/advertisements/tara.jpg" width="1200" height="400">
+							<img src="images/advertisements/tara.jpg" width="100%" height="500s">
 						</div>
 					</div>
 

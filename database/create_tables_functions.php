@@ -122,23 +122,23 @@ discount_description varchar(255)
 confirm1($query_create_discounts_table);
 }
 
-function transaction_table()
-{
-global $connection;
-$query_create_transaction_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.transactions(
-transaction_id int AUTO_INCREMENT PRIMARY KEY,
-booking_date DATETIME,
-departure_date DATE,
-passenger_id int(32),
-number_of_passenger int,
-aeroplane_id int,
-status varchar(255),
-charges float,
-discount float,
-total_charge float
-) ");
-confirm1($query_create_transaction_table);
-}
+// function transaction_table()
+// {
+// global $connection;
+// $query_create_transaction_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.transactions(
+// transaction_id int AUTO_INCREMENT PRIMARY KEY,
+// booking_date DATETIME,
+// departure_date DATE,
+// passenger_id int(32),
+// number_of_passenger int,
+// aeroplane_id int,
+// status varchar(255),
+// charges float,
+// discount float,
+// total_charge float
+// ) ");
+// confirm1($query_create_transaction_table);
+// }
 
 
 function announcements_table()
@@ -181,7 +181,8 @@ arrival_time TIME,
 route_id int,
 airfare int,
 
-discount_id int
+discount_id int,
+status varchar(255)
 
 ) ");
 	confirm1($query_create_flights_table);
@@ -198,15 +199,31 @@ function faqs_table()
 	confirm1($query_create_faqs_table);
 }
 
-function seats_table()
-{
-	$query_create_seats_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.seats(
-		seat_id int AUTO_INCREMENT PRIMARY KEY,
-		aeroplane_id int,
-		passenger_id int,
-		aeroplane_capacity int,
-		seat_number varchar(150)
+// function seats_table()
+// {
+// 	$query_create_seats_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.seats(
+// 		seat_id int AUTO_INCREMENT PRIMARY KEY,
+// 		aeroplane_id int,
+// 		passenger_id int,
+// 		aeroplane_capacity int,
+// 		seat_number varchar(150)
+// ) ");
+// }
+
+function tickets_table() {
+	global $connection;
+	$query_create_tickets_table = execute_query1("CREATE TABLE IF NOT EXISTS airlines_reservation_system.tickets(
+ticket_id int AUTO_INCREMENT PRIMARY KEY,
+
+flight_id int,
+passenger_id int,
+passenger_name varchar(255),
+passenger_age int,
+seat_number varchar(255),
+
+status varchar(255) 
 ) ");
+	confirm1($query_create_tickets_table);
 }
 
 ?>

@@ -21,6 +21,7 @@ session_start();
     <meta name="author" content="">
 
     <title>Airlines Admin</title>
+    <link rel="shortcut icon" href="../images/logoairline.jpg">
 
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

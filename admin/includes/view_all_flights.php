@@ -26,7 +26,7 @@ include('../functions.php');
                                     <th>Route</th>
                                     <th>Air Fare</th>
                                     <th>Discount</th>
-                                   
+                                    <th>Status</th>
                                     
                                     
                                     
@@ -58,7 +58,8 @@ include('../functions.php');
                         $route_id = $row['route_id'];
                         
                         $airfare = $row['airfare'];
-                        $discount_id = $row['discount_id'];  
+                        $discount_id = $row['discount_id'];
+                        $status = $row['status'];  
                             
                         echo "<tr>";
                             echo   "<td>{$flight_id}</td>";
@@ -111,7 +112,8 @@ include('../functions.php');
                             
 
                            
-                           
+                           echo "<td>{$status}</td>";
+                           echo "<td><a href='flights.php?change=$flight_id'>Change Status</a></td>";
                             echo "<td><a href='flights.php?source=edit_flights&edit_flight={$flight_id}'>Edit</a></td>";
                             echo "<td><a href='flights.php?delete=$flight_id'>Delete</a></td>";
                            
@@ -142,6 +144,35 @@ include('../functions.php');
 
                       
                             }
+
+
+                            if(isset($_GET['change']))
+                            {
+                                $flight_id_now= $_GET['change'];
+                                
+                        
+                                if($status == 'pending') {
+                                    $query ="UPDATE airlines_reservation_system.flights SET status= 'completed' WHERE flight_id = {$flight_id_now} ";
+                                $query5 = mysqli_query($connection, $query);
+                                confirm($query5);
+                                } 
+                                else if($status == 'completed') {
+                                
+                                      $query ="UPDATE airlines_reservation_system.flights SET status= 'pending' WHERE flight_id = {$flight_id_now} ";
+                                $query6 = mysqli_query($connection, $query);
+                                confirm($query6);
+                                }
+                              
+
+                                
+                                
+                                
+                                header("Location: flights.php");
+                            }
+
+
+                    
+
 
                          ?>
      

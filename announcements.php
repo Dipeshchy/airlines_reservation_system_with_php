@@ -15,7 +15,7 @@ passenger_login();
 
  ?>
  <body>
-     <div class="container">
+     <div class="">
         
         <?php 
 
@@ -50,10 +50,10 @@ if(isset($_GET['announcement_id']))
    			
         	 <div class="container">
 		 
-		 <h3 id='announcement-title' class="text-center"><?php echo $announcement_title; ?></h3>
+		 <h3 id='announcement-title' class="text-center mb-3 mt-2" style="font-weight: 600;"><?php echo $announcement_title; ?></h3>
          <img src="images/announcements/<?php echo $announcement_image; ?>" alt="" class="col-lg-3 rounded mx-auto d-block text-center">
 		 <article>
-        <p style="font-size: 120%;" id='announcement-detail' class="card"><?php echo $announcement_detail; ?>  </p>
+        <p style="font-size: 120%;" id='announcement-detail' class="mt-2"><?php echo $announcement_detail; ?>  </p>
     </article>
 
 		 </div>
